@@ -3,13 +3,13 @@ import {motion} from "motion/react"
 const Hero = () => {
   return (
     <section
-      className="h-[90vh] bg-[#0A101E] flex items-center justify-center text-white"
+      className="min-h-[100vh] bg-[#0A101E] flex items-center justify-center text-white"
       id="hero"
     >
       <motion.div
       initial={{ opacity: 0, x: -100 }}
       whileInView={{ opacity: 1, x: 0 }}
-      className="container mx-auto px-6 sm:px-12 lg:px-20 flex flex-col-reverse sm:flex-row items-center gap-8">
+      className="w-full pt-24 pb-12 md:pt-12 md:pb-0 mx-auto px-6 sm:px-12 lg:px-20 flex flex-col-reverse sm:flex-row items-center gap-8">
         {/* Text Content */}
         <div className="text-center sm:text-left sm:w-1/2 px-6">
           <h1 className="text-4xl sm:text-5xl font-bold mb-4">
