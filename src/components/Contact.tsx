@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 
+const service=import.meta.env.VITE_EMAILJS_SERVICE
+const template=import.meta.env.VITE_EMAILJS_TEMPLATE
+const KEY=import.meta.env.VITE_EMAILJS_KEY
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -20,10 +23,10 @@ const ContactForm = () => {
 
     emailjs
       .send(
-        'service_e27jhsc', // Replace with your EmailJS Service ID
-        'template_emck1by', // Replace with your EmailJS Template ID
+        service, // Replace with your EmailJS Service ID
+        template, // Replace with your EmailJS Template ID
         formData,
-        '1gHHneNreiKrhjreg' // Replace with your EmailJS Public Key
+        KEY // Replace with your EmailJS Public Key
       )
       .then(
         (result) => {
